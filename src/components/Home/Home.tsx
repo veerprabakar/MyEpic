@@ -1,24 +1,27 @@
 import * as React from 'react';
 import { Card, CardImg, CardText, CardBody, CardLink,
-  CardTitle, CardSubtitle,
-  Button, 
-  Form, 
-  FormGroup, 
-  Label, 
-  Input, 
+  CardTitle, CardSubtitle, Button, Form, FormGroup, Label, Input, 
   FormText, Col, Row } from 'reactstrap';
-import { AutoComplete } from 'antd';
 
+import { AutoComplete } from 'antd';
+         
 interface Props {
 
 }
 
-interface IProduct {
-  id: number;
-  name: string;
-  tagline: string;
-  image_url: string;
-}
+// tslint:disable-next-line:interface-name
+// interface IProduct {
+//   id: number;
+//   name: string;
+//   tagline: string;
+//   image_url: string;
+// }
+
+// Sample Code: 
+
+// function epivAuthenticate(target: object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>): any{
+//   return descriptor;
+// }
 
 export class Home extends React.Component<Props, {}> {
   state = {
@@ -54,7 +57,6 @@ export class Home extends React.Component<Props, {}> {
     return retval;
   }
 
-
   render() {
     var _this = this;
     return (
@@ -67,11 +69,7 @@ export class Home extends React.Component<Props, {}> {
           </FormGroup>
 
           <div>
-            <Row>
-            {
-              this.renderSearchResults(this.state.result)
-            }
-            </Row>
+            <Row>{ this.renderSearchResults(this.state.result) }</Row>
           </div>
 
         </Form>

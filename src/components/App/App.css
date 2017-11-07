@@ -8,27 +8,46 @@ body {
     padding: 10px;
 }
 
-.ap-title {
+
+.nav {
+    display: -ms-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
+     flex-wrap: initial;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* .ap-title {
     color: white;
 }
 
 .ap-navbar {
-    background-color: crimson;
+    background-color: #E80A2B;
 }
 
+.navbar {
+    border-bottom: lightgray;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
 .nav-link {
     color: white;
+}
+
+.nav-link:hover {
+    color: lightgray;
 }
 
 .ap-signin {
     text-align: right;
     background-color: white;
-    color: crimson;
+    color: #E80A2B;
 }
 
 .app-epic {
 
-    color: crimson;
+    color: #E80A2B;
 }
 .app-image {
     align-content: center;
@@ -49,7 +68,7 @@ Form {
 }
 
 .card-title {
-    color:crimson;
+    color:#E80A2B;
     font-size: large;
 }
 
@@ -58,4 +77,4 @@ Form {
     margin-bottom: 0;
     font-size: medium;
 }
-
+ */

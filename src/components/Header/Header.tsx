@@ -1,40 +1,79 @@
+import * as console from 'console';
+import { } from 'antd/lib/button';
 import * as React from 'react';
-//import { NavLink } from 'react-router-dom';
-import { NavLink, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import { UNavbar, 
+  UNavLink, 
+  UNavLinkSignIn, 
+  UNav, 
+  UNavRight, 
+  UNavbarBrand, UNavItem } from '../UI-Components/UNavigation';
+import { ULogo } from '../UI-Components/ULogo';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 interface Props {
-
+  //  dropdownOpen: boolean;
+  //  toggle: boolean;
 }
+// <b className="app-epic">EPIC</b> Shop 
 
 export class Header extends React.Component<Props, {}> {
 
+  state = {
+    dropdownOpen: false
+  };
+
+  constructor(props: {}) {
+    super(props);
+    
+    this.state = {
+      dropdownOpen: false
+    };
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  }
 
   render() {
     return (
       <div>
-      {/* <Button bsStyle="danger">Test  button</Button> */}
-      <Navbar light expand="md">
-          <NavbarBrand href="/"><b className="app-epic">EPIC</b> Shop</NavbarBrand>
-
-            <Nav className="ap-navbar">
-            <NavItem><NavLink href="/home">home</NavLink></NavItem>
-            <NavItem><NavLink href="/shop">shop</NavLink></NavItem>
-            <NavItem><NavLink className="ap-signin" href="/shop">Signin</NavLink></NavItem>
-            </Nav>
-
-        </Navbar>
-
-      {/* <Navbar color="faded" light expand="md">
-
-          <Nav>
-            <NavItem><NavLink activeClassName="active" to="/home">home</NavLink></NavItem>
-            <NavItem><NavLink activeClassName="active" to="/shop">shop</NavLink></NavItem>
-            <NavItem><NavLink activeClassName="active" to="/shop">Signin</NavLink></NavItem>
-          </Nav>
-        </Navbar> */}
-
-        </div>
+        <UNavbar expand="md">
+          <div style={{ width: '100%'}}>
+            <div style={{ textAlign: 'center'}}>
+              <UNavbarBrand href="/">
+              <ULogo />
+              </UNavbarBrand>
+            </div>
+            <div>
+              <UNav>
+                <UNavItem><UNavLink href="/home">home</UNavLink></UNavItem>
+                <UNavItem><UNavLink href="/shop">Orders</UNavLink></UNavItem>
+                <div>
+                  <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                  <DropdownToggle caret onClick={this.toggle} >
+                    Admin
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem disabled>Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem divider/>
+                    <DropdownItem>Another Action</DropdownItem>
+                  </DropdownMenu>
+                  </Dropdown>
+                </div>
+              </UNav>
+              <UNavRight>
+                <UNavItem><UNavLinkSignIn href="/shop">Signin</UNavLinkSignIn></UNavItem>
+              </UNavRight>
+            </div>
+          </div>
+        </UNavbar>
+      </div>
     );
   }
 }

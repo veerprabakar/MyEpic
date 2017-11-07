@@ -3,19 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react": "^16.0.19",
+    "@types/reactstrap": "^4.6.5",
     "antd": "^2.13.7",
     "bootstrap": "^4.0.0-alpha.6",
+    "material-ui": "^0.19.4",
     "mobx": "^3.3.1",
     "mobx-react": "^4.3.3",
     "react": "^16.0.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-addons-transition-group": "^15.6.2",
+    "react-authentication": "0.0.8",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
     "react-scripts-ts": "2.8.0",
     "react-transition-group": "^2.2.1",
-    "reactstrap": "^4.8.0"
+    "reactstrap": "^4.8.0",
+    "styled-components": "^2.2.3",
+    "styled-components-ts": "0.0.7"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -24,10 +30,12 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
-    "@types/react-router-dom": "^4.0.8",
     "@types/jest": "^21.1.4",
     "@types/node": "^8.0.46",
     "@types/react": "^16.0.18",
-    "@types/react-dom": "^16.0.2"
+    "@types/react-dom": "^16.0.2",
+    "@types/react-router-dom": "^4.0.8",
+    "typescript": "^2.6.1",
+    "typescript-styled-plugin": "^0.1.2"
   }
 }
