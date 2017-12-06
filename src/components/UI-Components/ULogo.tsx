@@ -10,7 +10,7 @@ render() {
     return (
         <div>
             <div>
-                <img src={require('../Images/uniload_logo.png')}/>
+                POC
             </div>
         </div>
         );

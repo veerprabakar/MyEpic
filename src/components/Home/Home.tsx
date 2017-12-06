@@ -63,9 +63,7 @@ export class Home extends React.Component<Props, {}> {
       <div>
         <Form>
           <FormGroup >
-            <Label for="searchProducts">Search</Label>
-            <Input type="text" name="prodSearch" id="search" placeholder="Product Name" />
-            <Button onClick={(function() { return _this.GetJSONData() })}>Go</Button>
+          <input type="file" accept="image/*" />
           </FormGroup>
 
           <div>
